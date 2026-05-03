@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   🔥 GLOBAL DARK SCROLLBAR FIX
+   =============================== */
+
+/* Chrome / Edge / Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a; /* dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 10px;
+  border: 2px solid #0f172a; /* makes thumb cleaner on dark UI */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #60a5fa;
+}
+
+/* ===============================
+   Firefox support
+   =============================== */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #0f172a;
+}
+
+/* ===============================
+   MOBILE SAFETY (IMPORTANT FIX)
+   =============================== */
+
+/* Prevent weird horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Smoother scrolling on iOS */
+html {
+  scroll-behavior: smooth;
+}
