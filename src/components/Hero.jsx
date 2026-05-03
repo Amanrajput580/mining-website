@@ -18,10 +18,10 @@ export default function Hero({ bounceHeroBtn }) {
   };
 
   return (
-    <section className="bg-dark text-white px-4 sm:px-6 py-12 sm:py-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 overflow-hidden">
+    <section className="bg-dark text-white px-4 sm:px-6 py-20 sm:py-16 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 overflow-hidden">
 
       {/* Left Content */}
-      <div className="max-w-xl w-full text-center md:text-left">
+      <div className="max-w-xl w-full text-center md:text-left pt-2 sm:pt-0">
 
         <p className="text-white mb-3 text-sm md:text-base">
           💎 Mine Smarter, Reward Better
