@@ -104,32 +104,26 @@ function App() {
 
       <Navbar />
 
-      {/* HERO */}
       <section id="home" className="px-3 sm:px-0">
         <Hero bounceHeroBtn={bounceHeroBtn} />
       </section>
 
-      {/* 🎬 VIDEO SECTION */}
       <section id="video" className="px-3 sm:px-0">
         <VideoSection />
       </section>
 
-      {/* STATS */}
       <section id="stats" className="px-3 sm:px-0">
         <Stats />
       </section>
 
-      {/* MACHINES */}
       <section id="machines" className="px-3 sm:px-0">
         <MiningMachines machines={machines} openDetails={openDetails} />
       </section>
 
-      {/* FEATURES */}
       <section id="features" className="px-3 sm:px-0">
         <Features />
       </section>
 
-      {/* ABOUT */}
       <section id="about" className="px-3 sm:px-0">
         <About />
       </section>
@@ -140,51 +134,25 @@ function App() {
       {selectedMachine && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-3">
 
-          <div className="
-            relative
-            bg-gray-900/95
-            backdrop-blur-xl
-            text-white
-            w-full sm:w-[90%] max-w-lg
-            rounded-xl
-            border border-blue-500/30
-            p-4 sm:p-6
-            overflow-hidden
-            shadow-[0_0_40px_rgba(59,130,246,0.15)]
-          ">
+          <div className="relative bg-gray-900/95 backdrop-blur-xl text-white w-full sm:w-[90%] max-w-lg rounded-xl border border-blue-500/30 p-4 sm:p-6 overflow-hidden">
 
-            {/* Close button */}
             <button
               onClick={closeDetails}
-              className="
-                absolute top-3 right-4 text-xl text-blue-400
-                drop-shadow-[0_0_10px_rgba(59,130,246,0.9)]
-                hover:scale-110 transition
-              "
+              className="absolute top-3 right-4 text-xl text-blue-400 hover:scale-110 transition"
             >
               ✖
             </button>
 
-            {/* Scroll Content */}
-            <div className="
-              max-h-[65vh] sm:max-h-[420px]
-              overflow-y-auto
-              overflow-x-hidden
-              pr-1 sm:pr-2
-              space-y-4 sm:space-y-5
-              break-words
-
-              scrollbar-thin
-              scrollbar-thumb-blue-500
-              scrollbar-track-gray-900
-            ">
+            <div className="max-h-[65vh] overflow-y-auto space-y-4">
 
               <h2 className="text-lg sm:text-xl font-bold text-blue-400">
                 {selectedMachine.title}
               </h2>
 
+              {/* ✅ FIXED IMG (THIS FIXES NETLIFY ERROR) */}
               <img
                 src={selectedMachine.img}
+                alt={selectedMachine.title}
                 className="w-28 sm:w-40 mx-auto"
               />
 
@@ -198,15 +166,9 @@ function App() {
 
             </div>
 
-            {/* Subscribe */}
             <button
               onClick={triggerSubscribe}
-              className="
-                mt-4 sm:mt-5 w-full bg-blue-500 py-2 rounded-lg font-semibold
-                hover:scale-105
-                hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]
-                transition
-              "
+              className="mt-4 w-full bg-blue-500 py-2 rounded-lg font-semibold hover:scale-105 transition"
             >
               Subscribe
             </button>
